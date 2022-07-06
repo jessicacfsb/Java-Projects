@@ -6,6 +6,13 @@ import cursojava.classes.Aluno;
 
 public class PrimeiraClasseJava {
 	public static void main(String[] args) {
+		
+		Aluno aluno = new Aluno();
+		System.out.println(aluno.toString());
+		
+		aluno = new Aluno();
+		System.out.println(aluno);
+		
 		//entrada de dados
 		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
 		String idade = JOptionPane.showInputDialog("Qual a idade do aluno?");
@@ -17,14 +24,22 @@ public class PrimeiraClasseJava {
 		String dataMatricula = JOptionPane.showInputDialog("Qual data da matrícula do aluno?");
 		String serie = JOptionPane.showInputDialog("Qual a série do aluno?");
 		String escola = JOptionPane.showInputDialog("Qual a escola do aluno?");
+		
+		String disciplina1 = JOptionPane.showInputDialog("Disciplina 1?");
 		String nota1 = JOptionPane.showInputDialog("Primeira nota: ");
+		
+		String disciplina2 = JOptionPane.showInputDialog("Disciplina 2?");
 		String nota2 = JOptionPane.showInputDialog("Segunda nota: ");
+		
+		String disciplina3 = JOptionPane.showInputDialog("Disciplina 3?");
 		String nota3 = JOptionPane.showInputDialog("Terceira nota: ");
+		
+		String disciplina4 = JOptionPane.showInputDialog("Disciplina 4?");
 		String nota4 = JOptionPane.showInputDialog("Quarta nota: ");
 		
 		//vc chama a classe que deseja iniciar (criar o obj)
 		//a partir deste momento o aluno se torna um obj
-		Aluno aluno1 = new Aluno(); //aqui será o joao
+		Aluno aluno1 = new Aluno(); 
 		aluno1.setNome(nome);
 		aluno1.setIdade(Integer.valueOf(idade));
 		aluno1.setDataNascimento(dataNascimento);
@@ -40,9 +55,14 @@ public class PrimeiraClasseJava {
 		aluno1.setNota3(Double.parseDouble(nota3));
 		aluno1.setNota4(Double.parseDouble(nota4));
 		
+		aluno1.setDisciplina1(disciplina1);		
+		aluno1.setDisciplina2(disciplina2);		
+		aluno1.setDisciplina3(disciplina3);		
+		aluno1.setDisciplina4(disciplina4);		
+		
 		System.out.println("Nome é: " + aluno1.getNome());
 		System.out.println("Idade é: " + aluno1.getIdade());
-		System.out.println("Nome da Mãe: " + aluno1.getIdade());
+		System.out.println("Nome da Mãe: " + aluno1.getNomeMae());
 		System.out.println("Nascimento: " + aluno1.getDataNascimento());
 		System.out.println("Média da nota é = " + aluno1.getMediaNota());
 		System.out.println("Resultado = " + aluno1.getAlunoAprovado());
