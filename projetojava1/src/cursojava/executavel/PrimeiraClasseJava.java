@@ -1,5 +1,7 @@
 package cursojava.executavel;
 
+import java.util.Iterator;
+
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
@@ -40,32 +42,22 @@ public class PrimeiraClasseJava {
 		aluno1.setSerieMatriculado(serie);
 		aluno1.setNomeEscola(escola);	
 		
-		//criando o obj na lista
-		Disciplina disciplina1 = new Disciplina();
-		disciplina1.setDisciplina("Banco de Dados");
-		disciplina1.setNota(90);  //adicionando na lista
-		aluno1.getDisciplinas().add(disciplina1);
+		for (int pos = 1; pos <=4; pos++) {
+			String nomeDisciplina = JOptionPane.showInputDialog("Nome da disciplina " +pos+"?");
+			String notaDisciplina = JOptionPane.showInputDialog("Nota da disciplina " +pos+"?");
+			
+			Disciplina disciplina = new Disciplina();
+			disciplina.setDisciplina(nomeDisciplina);
+			disciplina.setNota(Double.valueOf(notaDisciplina));
+			
+			aluno1.getDisciplinas().add(disciplina);
+		}
 		
-		//adicionando outro obj
-		Disciplina disciplina2 = new Disciplina();
-		disciplina2.setDisciplina("Matematica");
-		disciplina2.setNota(80);
-		//adicionando na lista
-		aluno1.getDisciplinas().add(disciplina2);
-		
-		//adicionando outro obj
-		Disciplina disciplina3 = new Disciplina();
-		disciplina2.setDisciplina("Geografia");
-		disciplina2.setNota(97);
-		//adicionando na lista
-		aluno1.getDisciplinas().add(disciplina3);
-		
-		//adicionando outro obj
-		Disciplina disciplina4 = new Disciplina();
-		disciplina2.setDisciplina("Java web");
-		disciplina2.setNota(70);
-		//adicionando na lista
-		aluno1.getDisciplinas().add(disciplina4);
+		int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover disciplina?");
+		if (escolha == 0) {
+			String disciplinaRemover = JOptionPane.showInputDialog("ual disciplina: 1, 2, 3 ou 4?");
+			aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue());
+		}
 		
 		System.out.println(aluno1); //descrição do obj na memoria
 		System.out.println("Média da nota é = " + aluno1.getMediaNota());
