@@ -3,6 +3,7 @@ package cursojava.executavel;
 import javax.swing.JOptionPane;
 
 import cursojava.classes.Aluno;
+import cursojava.classes.Disciplina;
 
 public class PrimeiraClasseJava {
 	public static void main(String[] args) {
@@ -25,18 +26,6 @@ public class PrimeiraClasseJava {
 		String serie = JOptionPane.showInputDialog("Qual a série do aluno?");
 		String escola = JOptionPane.showInputDialog("Qual a escola do aluno?");
 		
-		String disciplina1 = JOptionPane.showInputDialog("Disciplina 1?");
-		String nota1 = JOptionPane.showInputDialog("Primeira nota: ");
-		
-		String disciplina2 = JOptionPane.showInputDialog("Disciplina 2?");
-		String nota2 = JOptionPane.showInputDialog("Segunda nota: ");
-		
-		String disciplina3 = JOptionPane.showInputDialog("Disciplina 3?");
-		String nota3 = JOptionPane.showInputDialog("Terceira nota: ");
-		
-		String disciplina4 = JOptionPane.showInputDialog("Disciplina 4?");
-		String nota4 = JOptionPane.showInputDialog("Quarta nota: ");
-		
 		//vc chama a classe que deseja iniciar (criar o obj)
 		//a partir deste momento o aluno se torna um obj
 		Aluno aluno1 = new Aluno(); 
@@ -49,34 +38,40 @@ public class PrimeiraClasseJava {
 		aluno1.setNomePai(pai);
 		aluno1.setDataMatricula(dataMatricula);
 		aluno1.setSerieMatriculado(serie);
-		aluno1.setNomeEscola(escola);
+		aluno1.setNomeEscola(escola);	
 		
-		aluno1.getDisciplina().setNota1(Double.parseDouble(nota1));
-		aluno1.getDisciplina().setNota2(Double.parseDouble(nota2));
-		aluno1.getDisciplina().setNota3(Double.parseDouble(nota3));
-		aluno1.getDisciplina().setNota4(Double.parseDouble(nota4));
+		//criando o obj na lista
+		Disciplina disciplina1 = new Disciplina();
+		disciplina1.setDisciplina("Banco de Dados");
+		disciplina1.setNota(90);  //adicionando na lista
+		aluno1.getDisciplinas().add(disciplina1);
 		
-		aluno1.getDisciplina().setDisciplina1(disciplina1);		
-		aluno1.getDisciplina().setDisciplina2(disciplina2);		
-		aluno1.getDisciplina().setDisciplina3(disciplina3);		
-		aluno1.getDisciplina().setDisciplina4(disciplina4);		
+		//adicionando outro obj
+		Disciplina disciplina2 = new Disciplina();
+		disciplina2.setDisciplina("Matematica");
+		disciplina2.setNota(80);
+		//adicionando na lista
+		aluno1.getDisciplinas().add(disciplina2);
 		
-		System.out.println("Nome é: " + aluno1.getNome());
-		System.out.println("Idade é: " + aluno1.getIdade());
-		System.out.println("Nome da Mãe: " + aluno1.getNomeMae());
-		System.out.println("Nascimento: " + aluno1.getDataNascimento());
+		//adicionando outro obj
+		Disciplina disciplina3 = new Disciplina();
+		disciplina2.setDisciplina("Geografia");
+		disciplina2.setNota(97);
+		//adicionando na lista
+		aluno1.getDisciplinas().add(disciplina3);
+		
+		//adicionando outro obj
+		Disciplina disciplina4 = new Disciplina();
+		disciplina2.setDisciplina("Java web");
+		disciplina2.setNota(70);
+		//adicionando na lista
+		aluno1.getDisciplinas().add(disciplina4);
+		
+		System.out.println(aluno1); //descrição do obj na memoria
 		System.out.println("Média da nota é = " + aluno1.getMediaNota());
 		System.out.println("Resultado = " + aluno1.getAlunoAprovado());
 		System.out.println("Resultado 2 = " + (aluno1.getAlunoAprovado2() ? "Aprovado" : "Reprovado")); //com operador ternario
 		
-		//--------------------------------------------------------------------
 		
-		Aluno aluno2 = new Aluno(); //aqui será o pedro
-		Aluno aluno3 = new Aluno(); //aqui será o alex
-		Aluno aluno4 = new Aluno("Maria"); //pre definido na classe: ALUNO
-		Aluno aluno5 = new Aluno("Jose", 50); //pre definido na classe: ALUNO
-	//new == instanciar um obj
-	//as var aluno1,2,3,4,5 == fazem referência ao obj aluno
-	//os atributos são as caracteristicas definidas na classe ALUNO
 	}
 }

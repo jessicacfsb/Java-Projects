@@ -53,9 +53,6 @@ dtdSymbol=255,191,191
 dtdTag=96,96,255
 dtdTagName=96,96,255
 eclipse.preferences.version=1
-<<<<<<< HEAD
-org.eclipse.jdt.ui.ColoredLabels.match_highlight=73,83,90
-=======
 entityReference=212,0,255
 org.eclipse.debug.ui.console.background=0,0,0
 org.eclipse.debug.ui.console.stream.err=255,127,127
@@ -143,7 +140,6 @@ org.eclipse.pde.genericeditor.extension.editor.color.quote=118,200,244
 org.eclipse.pde.genericeditor.extension.editor.color.tag=86,156,214
 org.eclipse.pde.genericeditor.extension.editor.color.text=207,212,216
 org.eclipse.search.ui.match.highlight=73,83,90
->>>>>>> Listas_e_Coleções
 org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.ui.commands>\r\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+D"/>\r\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+D"/>\r\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="ALT+CTRL+ARROW_DOWN"/>\r\n<keyBinding commandId\="org.eclipse.ui.edit.text.copyLineDown" contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+D"/>\r\n</org.eclipse.ui.commands>
 org.eclipse.ui.editors.backgroundColor=0,0,0
 org.eclipse.ui.editors.currentLineColor=7,8,8
