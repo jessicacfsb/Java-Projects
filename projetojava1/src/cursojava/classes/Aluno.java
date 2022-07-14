@@ -145,8 +145,12 @@ public class Aluno {
 	//verificar se o aluno reprovou ou foi aprovado
 	public String getAlunoAprovado() {
 		double media = this.getMediaNota();
-		if (media >=70) {
-			return "Aluno está aprovado";
+		if (media >=50) {
+			if (media >=70) {
+				return "Aluno está aprovado";
+			} else {
+				return "Aluno está em recuperação";
+			}
 		}else {
 			return "Aluno está reprovado";
 		}
