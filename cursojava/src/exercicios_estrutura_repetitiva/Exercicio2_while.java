@@ -2,7 +2,7 @@ package exercicios_estrutura_repetitiva;
 
 import java.util.Scanner;
 
-public class Exercicio2 {
+public class Exercicio2_while {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
