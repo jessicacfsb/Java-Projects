@@ -8,17 +8,17 @@ public class Exercicio6 {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner scanner = new Scanner(System.in);
-		double A, B, C, triangulo, circulo, trapezio, quadrado, retangulo, pi = 3.14159;
+		double a, b, c, triangulo, circulo, trapezio, quadrado, retangulo, pi = 3.14159;
 		
-		A = scanner.nextDouble();
-		B = scanner.nextDouble();
-		C = scanner.nextDouble();
+		a = scanner.nextDouble();
+		b = scanner.nextDouble();
+		c = scanner.nextDouble();
 		
-		triangulo = A * C / 2.0;
-		circulo = pi * C * C;
-		trapezio = (A + B) / 2.0 * C;
-		quadrado = B * B;
-		retangulo = A * B;
+		triangulo = a * c / 2.0;
+		circulo = pi *c * c;
+		trapezio = (a + b) / 2.0 * c;
+		quadrado = b * b;
+		retangulo = a * b;
 		
 		System.out.printf("TRIANGULO: %.3f%n",triangulo);
 		System.out.printf("CIRCULO: %.3f%n", circulo);
