@@ -31,7 +31,7 @@ public class trabalhandoStrings {
 		System.out.println("");
 		
 		String s = "potato apple lemon";
-		String[] vect = s.split(" ");
+		String[] vect = s.split(" "); //usar os espaços em branco como separador da string
 		
 		System.out.println(vect[0]);
 		System.out.println(vect[1]);
